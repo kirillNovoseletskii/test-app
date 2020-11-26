@@ -10,11 +10,19 @@
 import topBar from "./topBar"
 import ItemBar from "./ItemBar"
 import navBar from "./navBar"
+
+import {mapGetters} from 'vuex'
+
 export default {
     components: {
         topBar,
         ItemBar,
         navBar
+    },
+    computed: {
+        ...mapGetters([
+            "cartCount"
+        ])
     }
 }
 </script>
